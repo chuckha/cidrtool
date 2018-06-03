@@ -8,7 +8,7 @@ import (
 	"strings"
 )
 
-// IPToInt converts an IP address (x.x.x.x) to an integer.
+// IPToInt converts an IP address (x.x.x.x) to a decimal based integer.
 func IPToInt(ip string) (int, error) {
 	octets := strings.Split(ip, ".")
 	sum := 0
@@ -17,7 +17,6 @@ func IPToInt(ip string) (int, error) {
 		if err != nil {
 			return 0, err
 		}
-		//		fmt.Println(val, i, 24-8*i, val<<uint(24-8*i))
 		sum += val << uint(24-8*i)
 	}
 	return sum, nil
