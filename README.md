@@ -8,7 +8,7 @@ Install the command line tool using go's tool chain:
 
 ```bash
 # optionally add go's bin path to your $PATH
-export $PATH=$GOPATH/bin
+export $PATH=$GOPATH/bin:$PATH
 
 # install cidrc
 go install github.com/chuckha/cidrtool/cmd/cidrc
